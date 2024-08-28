@@ -38,3 +38,11 @@ npm install nodemon concurrently
 "start:run": "nodemon build/index.js",
 "start": "concurrently npm:start:*"
 ```
+
+
+## add git ignore
+```json
+"echo >.gitignore"
+```
+
+
