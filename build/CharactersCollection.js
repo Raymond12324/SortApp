@@ -2,21 +2,21 @@
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.CharactersCollections = void 0;
 class CharactersCollections {
-    constructor(data) {
-        this.data = data;
+    constructor(items) {
+        this.items = items;
     }
     get length() {
-        return this.data.length;
+        return this.items.length;
     }
     compare(leftIndex, rightIndex) {
-        return this.data[leftIndex].toLowerCase() > this.data[rightIndex].toLowerCase();
+        return this.items[leftIndex].toLowerCase() > this.items[rightIndex].toLowerCase();
     }
     swap(leftIndex, rightIndex) {
-        const characters = this.data.split('');
+        const characters = this.items.split('');
         const leftHanded = characters[leftIndex];
         characters[leftIndex] = characters[rightIndex];
         characters[rightIndex] = leftHanded;
-        this.data = characters.join('');
+        this.items = characters.join('');
     }
 }
 exports.CharactersCollections = CharactersCollections;

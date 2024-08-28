@@ -2,19 +2,19 @@
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.NumberCollection = void 0;
 class NumberCollection {
-    constructor(data) {
-        this.data = data;
+    constructor(items) {
+        this.items = items;
     }
     get length() {
-        return this.data.length;
+        return this.items.length;
     }
     compare(leftIndex, rightIndex) {
-        return this.data[leftIndex] > this.data[rightIndex];
+        return this.items[leftIndex] > this.items[rightIndex];
     }
     swap(leftIndex, rightIndex) {
-        const leftHanded = this.data[leftIndex];
-        this.data[leftIndex] = this.data[rightIndex];
-        this.data[rightIndex] = leftHanded;
+        const leftHanded = this.items[leftIndex];
+        this.items[leftIndex] = this.items[rightIndex];
+        this.items[rightIndex] = leftHanded;
     }
 }
 exports.NumberCollection = NumberCollection;

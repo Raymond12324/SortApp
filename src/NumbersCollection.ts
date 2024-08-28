@@ -1,18 +1,18 @@
 export class NumberCollection {
 
-    constructor(public data: number[]) { }
+    constructor(public items: number[]) { }
 
     get length(): number {
-        return this.data.length;
+        return this.items.length;
     }
 
     compare(leftIndex: number, rightIndex: number): boolean {
-        return this.data[leftIndex] > this.data[rightIndex];
+        return this.items[leftIndex] > this.items[rightIndex];
     }
 
     swap(leftIndex: number, rightIndex: number): void {
-        const leftHanded = this.data[leftIndex];
-        this.data[leftIndex] = this.data[rightIndex];
-        this.data[rightIndex] = leftHanded;
+        const leftHanded = this.items[leftIndex];
+        this.items[leftIndex] = this.items[rightIndex];
+        this.items[rightIndex] = leftHanded;
     }
 }

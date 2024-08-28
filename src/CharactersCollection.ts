@@ -1,22 +1,21 @@
-export class CharactersCollections{
-    constructor(public data: string) { 
+export class CharactersCollections {
+    constructor(public items: string) {
 
     }
 
     get length(): number {
-        return this.data.length;
+        return this.items.length;
     }
 
     compare(leftIndex: number, rightIndex: number): boolean {
-        return this.data[leftIndex].toLowerCase() > this.data[rightIndex].toLowerCase();
+        return this.items[leftIndex].toLowerCase() > this.items[rightIndex].toLowerCase();
     }
 
     swap(leftIndex: number, rightIndex: number): void {
-        const characters = this.data.split('');
+        const characters = this.items.split('');
         const leftHanded = characters[leftIndex];
         characters[leftIndex] = characters[rightIndex];
         characters[rightIndex] = leftHanded;
-
-        this.data = characters.join('');
+        this.items = characters.join('');
     }
 }
