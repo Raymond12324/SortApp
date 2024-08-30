@@ -1,10 +1,11 @@
 import { Sorter } from "./Sorter";
 import { NumberCollection } from "./NumbersCollection";
 import { CharactersCollections } from "./CharactersCollection";
+import { LinkedList } from "./LinkedList";
 
+const linkedList = new LinkedList();
+linkedList.add(500);
+linkedList.add(-10);
+linkedList.sort();
 
-const collectionChar = new CharactersCollections('dcbaz');
-const collectionNumber = new NumberCollection([10, 3, -5, 0]);
-const sort = new Sorter(collectionChar);
-sort.sort();
-console.log(sort.collection);
+linkedList.print();
